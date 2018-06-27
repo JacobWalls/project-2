@@ -1,0 +1,27 @@
+{
+  "name": "project-2",
+  "version": "1.0.0",
+  "description": "budget app",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JacobWalls/project-2.git"
+  },
+  "keywords": [
+    "budget",
+    "class"
+  ],
+  "author": "Jake, Kenton, Lydia, AJ",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JacobWalls/project-2/issues"
+  },
+  "homepage": "https://github.com/JacobWalls/project-2#readme",
+  "dependencies": {
+    "mysql2": "^1.5.3",
+    "sequelize": "^4.38.0"
+  }
+}
