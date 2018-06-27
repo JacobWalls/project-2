@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/JacobWalls/project-2#readme",
   "dependencies": {
+    "dotenv": "^6.0.0",
     "mysql2": "^1.5.3",
     "sequelize": "^4.38.0"
   }
