@@ -1,4 +1,4 @@
-module.exports = function(sequelize, DataTypes) {
+module.exports = function (sequelize, DataTypes) {
   var User = sequelize.define("User", {
     // Giving the user model a name of type STRING
     full_name: DataTypes.STRING,
@@ -7,7 +7,7 @@ module.exports = function(sequelize, DataTypes) {
     total_income: DataTypes.INTEGER
   });
 
-  User.associate = function(models) {
+  User.associate = function (models) {
     // Associating User with Spending
     // When an User is deleted, also delete any associated Spending
     User.hasOne(models.Spending, {
