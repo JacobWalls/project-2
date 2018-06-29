@@ -1,9 +1,6 @@
 {
   "development": {
-    "username": "root",
-    "password": "process.env.passwor",
-    "database": "database_development",
-    "host": "127.0.0.1",
+    "url": "mysql://cyik3jqwmuqrjc43:hfmsq4t5awazpsmk@o677vxfi8ok6exrd.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/dfomesyxj5lb98sm",
     "dialect": "mysql"
   },
   "test": {

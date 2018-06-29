@@ -6,7 +6,7 @@ CREATE TABLE users(
     id int NOT NULL AUTO_INCREMENT,
     user_name VARCHAR (255) NOT NULL,
     PRIMARY KEY (id)
-)
+);
 
 CREATE TABLE spending(
     id int NOT NULL AUTO_INCREMENT,
@@ -19,7 +19,7 @@ CREATE TABLE spending(
     beauty INT NOT NULL,
     entertainment INT NOT NULL,
     PRIMARY KEY (id)
-)
+);
 
 INSERT INTO users (user_name) VALUES ("Lydia"), ("AJ"), ("JACOB"), ("KENTON");
 
