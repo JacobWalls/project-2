@@ -11,7 +11,7 @@ var connection = mysql.createConnection({
     host: "localhost",
     user: "root",
     password: process.env.password,
-    database: "chirpy"
+    database: "stacks_db"
 });
 
 // Connect to the database
