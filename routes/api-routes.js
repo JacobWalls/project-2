@@ -7,7 +7,7 @@ module.exports = function (app) {
     app.get("/api/spending", function (req, res) {
 
         db.Spending.findAll({}).then(function (dbSpending) {
-            console.log("These are all the budgets on file:" + dbSpending);
+            console.log("These are all the budgets on file:" + JSON.stringify(dbSpending));
             res.json(dbSpending);
         });
     });

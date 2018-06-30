@@ -1,5 +1,9 @@
 module.exports = function(sequelize, DataTypes) {
     var Spending = sequelize.define("Spending", {
+      monthlyIncome: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+      },
       housing: {
         type: DataTypes.INTEGER,
         allowNull: true,

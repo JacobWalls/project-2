@@ -3,8 +3,7 @@ module.exports = function (sequelize, DataTypes) {
     // Giving the user model a name of type STRING
     full_name: DataTypes.STRING,
     email: DataTypes.STRING,
-    password: DataTypes.STRING,
-    total_income: DataTypes.INTEGER
+    password: DataTypes.STRING
   });
 
   User.associate = function (models) {
