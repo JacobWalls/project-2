@@ -12,13 +12,18 @@ module.exports = function (app) {
         });
     });
 
-    //GET route to pull all users who have submitted data
-    app.get("/api/user", function (req, res) {
-        db.User.findAll({}).then(function (dbUser) {
+    
+    //GET route to pull a budget by a particular nickname and password 
+    app.get("/api/spending/:nickname/:password", function (req, res) {
+        db.User.findOne({
+            where: {
+                nickname: req.params.nickname,
+                password: req.params.password                
+            }
+        }).then(function(dbUser){
             res.json(dbUser);
-        });
+        })
     });
-
 
 
     //POST route for spending information input by the user
@@ -39,7 +44,8 @@ module.exports = function (app) {
     });
 
     //PUT route used to update the budget for users as well
-    app.put("/api/spending", function (req, res) {
+    app.put("/api/spending/:nickname/:password", function (req, res) {
+
         db.Spending.update({
             // monthlyIncome: req.body.monthlyIncome,
             // housing: req.body.housing,
