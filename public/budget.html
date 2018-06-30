@@ -1,0 +1,71 @@
+<DOCTYP html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Overflowed</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <script src="jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <!-- input forms for user info -->
+    <div id="spending" class="col-sm-4">
+        <div class="input-group">
+            <span id="monthlyIncome" class="input-group-addon">Monthly Income:</span>
+            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+        </div>
+        <br>
+        <div class="input-group">
+            <span id="housing" class="input-group-addon" style="background-color: rgb(223, 195, 41)">Housing:</span>
+            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+        </div>
+        <br>
+        <div class="input-group">
+            <span id="utilities" class="input-group-addon" style="background-color: skyblue">Utilities:</span>
+            <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)">
+        </div>
+        <br>
+        <div class="input-group">
+            <span id="phone" class="input-group-addon" style="background-color: salmon">Phone:</span>
+            <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)">
+        </div>
+        <br>
+        <div class="input-group">
+            <span id="cableInternet" class="input-group-addon" style="background-color: rgb(230, 54, 230)">Cable-Internet:</span>
+            <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)">
+        </div>
+        <br>
+        <div class="input-group">
+            <span id="food" class="input-group-addon" style="background-color: lime">Food</span>
+            <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)">
+        </div>
+        <br>
+        <div class="input-group">
+            <span id="clothing" class="input-group-addon" style="background-color: rgba(172, 28, 59, 0.664)">Clothing:</span>
+            <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)">
+        </div>
+        <br>
+        <div class="input-group">
+            <span id="beauty" class="input-group-addon" style="background-color: rgb(240, 195, 195)">Beauty:</span>
+            <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)">
+        </div>
+        <br>
+        <div class="input-group">
+            <span id="entertainment" class="input-group-addon" style="background-color: rgb(28, 161, 161)">Entertainment:</span>
+            <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)">
+        </div>
+        <br>
+        <!-- button that will push our user info to our database -->
+        <button id="pushButton">Git $tackin'</button>
+    </div>
+
+    <!-- new div for our bar graph -->
+    <div id="barGraph" class="col-sm-8">
+            <canvas id="spendingChart" width="600" height="400"></canvas>
+    </div>
+<script src="js/budget.js"></script>
+</body>
+
+</html>
