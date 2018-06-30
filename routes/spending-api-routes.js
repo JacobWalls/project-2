@@ -6,22 +6,25 @@ module.exports = function (app) {
     //GET route to pull all of the budgets on file
     app.get("/api/spending", function (req, res) {
 
-        db.Spending.findAll({}).then(function (dbSpending) {
+        db.Spending.findAll({
+            include: [db.User]
+        }).then(function (dbSpending) {
             console.log("These are all the budgets on file:" + JSON.stringify(dbSpending));
             res.json(dbSpending);
         });
     });
 
-    
-    //GET route to pull a budget by a particular nickname and password 
+
+    //GET route to pull a single budget by a particular nickname and password 
     app.get("/api/spending/:nickname/:password", function (req, res) {
         db.User.findOne({
             where: {
                 nickname: req.params.nickname,
-                password: req.params.password                
-            }
-        }).then(function(dbUser){
-            res.json(dbUser);
+                password: req.params.password
+            },
+            include: [db.Spending]
+        }).then(function (dbSpending) {
+            res.json(dbSpending);
         })
     });
 
