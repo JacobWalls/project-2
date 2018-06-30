@@ -22,15 +22,15 @@ $("#pushButton").on("click", function(event) {
   event.preventDefault();
 
   var userData = {
-    monthlyIncome: $("monthlyIncome").val().trim(),
-    housing: $("housing").val().trim(),
-    utilities: $("utilities").val().trim(),
-    phone: $("phone").val().trim(),
-    cableInternet: $("cableInternet").val().trim(),
-    food: $("food").val().trim(),
-    clothing: $("clothing").val().trim(),
-    beauty: $("beauty").val().trim(),
-    entertainment: $("entertainment").val().trim(),
+    monthlyIncome: $("#monthlyIncome").val().trim(),
+    housing: $("#housing").val().trim(),
+    utilities: $("#utilities").val().trim(),
+    phone: $("#phone").val().trim(),
+    cableInternet: $("#cableInternet").val().trim(),
+    food: $("#food").val().trim(),
+    clothing: $("#clothing").val().trim(),
+    beauty: $("#beauty").val().trim(),
+    entertainment: $("#entertainment").val().trim(),
   };
 
   $.post("/api/...", userData)
@@ -39,14 +39,14 @@ $("#pushButton").on("click", function(event) {
     console.log(data);
   })
 
-  $("monthlyIncome").val("");
-  $("housing").val("");
-  $("utilities").val("");
-  $("phone").val("");
-  $("cableInternet").val("");
-  $("food").val("");
-  $("clothing").val("");
-  $("beauty").val("");
-  $("entertainment").val("");
+  $("#monthlyIncome").val("");
+  $("#housing").val("");
+  $("#utilities").val("");
+  $("#phone").val("");
+  $("#cableInternet").val("");
+  $("#food").val("");
+  $("#clothing").val("");
+  $("#beauty").val("");
+  $("#entertainment").val("");
 })
 
