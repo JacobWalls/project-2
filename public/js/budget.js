@@ -33,7 +33,8 @@ $("#pushButton").on("click", function (event) {
     beauty: $("#beauty").val().trim(),
     entertainment: $("#entertainment").val().trim(),
   };
-
+  console.log(userData);
+  
   $.post("/newbudget", userData)
 
     .then(function (data) {
