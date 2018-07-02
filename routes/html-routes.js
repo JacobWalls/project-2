@@ -19,7 +19,7 @@ module.exports = function (app) {
 
   // budget route loads budget.html
   app.get("/newBudget", function (req, res) {
-    res.sendFile(path.join(__dirname, "../public/budget2.html"));
+    res.sendFile(path.join(__dirname, "../public/budget.html"));
   });
 
   // user route loads signup page
