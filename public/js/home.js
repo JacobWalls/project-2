@@ -1,4 +1,4 @@
-$("#modalSignup").on("click", function(event) {
+$("#modalSignup").on("click", function (event) {
     event.preventDefault();
 
     var signUp = {
@@ -8,15 +8,14 @@ $("#modalSignup").on("click", function(event) {
         password: $("#password").val().trim(),
     };
 
-    $.post("/api/...", signUp)
+    $.post("/api/users", signUp)
 
-    .then(function(data) {
-        console.log(data);
-    })
+        .then(function (data) {
+            console.log(data);
+        })
 
     $("#fullName").val("");
     $("#email").val("");
     $("#nickname").val("");
     $("#password").val("");
 })
-

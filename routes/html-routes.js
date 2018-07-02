@@ -18,8 +18,12 @@ module.exports = function (app) {
   });
 
   // budget route loads budget.html
-  app.get("/spending", function (req, res) {
-    res.sendFile(path.join(__dirname, "../public/budget.html"));
+  app.get("/newBudget", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/budget2.html"));
   });
 
+  // user route loads signup page
+  app.get("/userSignup", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/index.html"));
+  });
 };
