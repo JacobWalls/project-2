@@ -42,10 +42,31 @@ module.exports = function (app) {
             clothing: req.body.clothing,
             beauty: req.body.beauty,
             entertainment: req.body.entertainment,
+            //we can't keep this userID field in the request.  
+            //or we have to send it with the budget info.
             UserId: 1
         }).then(function (dbSpending) {
             res.json(dbSpending);
-            console.log("contact");
+
+
+            var housingPercentage = (dbSpending.housing / dbSpending.monthlyIncome);
+            var utilitiesPercentage = (dbSpending.utilities / dbSpending.monthlyIncome);
+            var phonePercentage = (dbSpending.phone / dbSpending.monthlyIncome);
+            var cableInternetPercentage = (dbSpending.cable_internet / dbSpending.monthlyIncome);
+            var foodPercentage = (dbSpending.food / dbSpending.monthlyIncome);
+            var clothingPercentage = (dbSpending.clothing / dbSpending.monthlyIncome);
+            var beautyPercentage = (dbSpending.beauty / dbSpending.monthlyIncome);
+            var entertainmentPercentage = (dbSpending.entertainment / dbSpending.monthlyIncome);
+
+            console.log("Housing accounts for " + housingPercentage.toFixed(2) * 100 + "% of your monthly income!");
+            console.log("Utilities account for " + utilitiesPercentage.toFixed(2) * 100 + "% of your monthly income!");
+            console.log("Your phone bill accounts for " + phonePercentage.toFixed(2) * 100 + "% of your monthly income!");
+            console.log("Cable/Internet accounts for " + cableInternetPercentage.toFixed(2) * 100 + "% of your monthly income!");
+            console.log("Food accounts for " + foodPercentage.toFixed(2) * 100 + "% of your monthly income!");
+            console.log("Clothing accounts for " + clothingPercentage.toFixed(2) * 100 + "% of your monthly income!");
+            console.log("Beauty supplies make up " + beautyPercentage.toFixed(2) * 100 + "% of your monthly income!");
+            console.log("Entertainment spending accounts for " + entertainmentPercentage.toFixed(2) * 100 + "% of your monthly income!");
+            console.log("The above came back from the database!");
         });
     });
 
