@@ -27,14 +27,14 @@ $("#pushButton").on("click", function (event) {
     housing: $("#housing").val().trim(),
     utilities: $("#utilities").val().trim(),
     phone: $("#phone").val().trim(),
-    cableInternet: $("#cableInternet").val().trim(),
+    cable_internet: $("#cableInternet").val().trim(),
     food: $("#food").val().trim(),
     clothing: $("#clothing").val().trim(),
     beauty: $("#beauty").val().trim(),
     entertainment: $("#entertainment").val().trim(),
   };
   console.log(userData);
-  
+
   $.post("/newbudget", userData)
 
     .then(function (data) {
