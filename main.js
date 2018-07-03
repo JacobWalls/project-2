@@ -6,7 +6,7 @@
 // =============================================================
 var express = require("express");
 var bodyParser = require("body-parser");
-
+require("dotenv").config();
 // Sets up the Express App
 // =============================================================
 var app = express();
@@ -36,7 +36,7 @@ require("./routes/user-api-routes")(app);
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
 db.sequelize.sync({
-  force: true
+  //force: true
 }).then(function () {
   app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);

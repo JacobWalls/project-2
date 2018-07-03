@@ -41,7 +41,8 @@ module.exports = function (app) {
             food: req.body.food,
             clothing: req.body.clothing,
             beauty: req.body.beauty,
-            entertainment: req.body.entertainment
+            entertainment: req.body.entertainment,
+            UserId: 1
         }).then(function (dbSpending) {
             res.json(dbSpending);
             console.log("contact");
