@@ -34,7 +34,7 @@ a:hover {
   background-color: white;
   border-bottom: 1px grey solid;
   position: absolute;
-  z-index: 1;
+  z-index: 100;
 }
 
 .left {
@@ -49,7 +49,6 @@ a:hover {
 .logo {
   height: 90px;
   width: auto;
-  margin-top: 10px;
 }
 
 .right {
@@ -63,18 +62,13 @@ a:hover {
   border-radius: 8px;
   width: 110px;
   height: 50px;
-  margin: 16px;
   display: inline-block;
-  margin-top: 25px;
-}
-
-.sign-text {
+  border: none;
   text-align: center;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 400;
   font-family: 'Raleway', sans-serif;
   color: black;
-  padding-top: 7px;
 }
 
 .log-button {
@@ -85,16 +79,12 @@ a:hover {
   height: 50px;
   margin: 16px;
   display: inline-block;
-  margin-top: 25px;
-}
-
-.log-text {
   text-align: center;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 400;
   font-family: 'Raleway', sans-serif;
   color:white;
-  padding-top: 7px;
+  border: none;
 }
 
 /* LANDING CONTROLS */
@@ -260,7 +250,6 @@ a:hover {
   .logo {
     height: 40px;
     width: auto;
-    margin-top: 20px;
   }
 }
 
@@ -271,5 +260,8 @@ a:hover {
 
 /* laptops */
 @media screen and (min-width: 1001px) and (max-width: 2600px) {
-
+  .logo {
+    height: 80px;
+    width: auto;
+  }
 }
