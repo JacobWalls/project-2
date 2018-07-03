@@ -1,8 +1,4 @@
 {
-  "development": {
-   "url": "mysql://hfurs1omyt1e6s1m:pda18n5f3nsrjibj@o677vxfi8ok6exrd.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/hmcmnp37wgtoxpai",
-    "dialect": "mysql"
-  },
   "test": {
     "username": "root",
     "password": "yoroshiku@13",
@@ -16,5 +12,8 @@
     "database": "database_production",
     "host": "127.0.0.1",
     "dialect": "mysql"
+  },
+  "development": {
+    "use_env_variable" : "JAWSDB_URL"
   }
 }
