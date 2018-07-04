@@ -205,6 +205,10 @@ body {
 /* spending table and graph */
 #spending{
     border-style: solid;
-    margin-top: 25%;
+    border-color: gray;
+    margin:10% 0 0 5%;
+    padding: 10px 15px;
+    background-color: rgb(230, 230, 230);
+    border-radius: 10px;
 }
   
