@@ -11,14 +11,14 @@
             crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-</head>
+    </head>
 
     <body>
-        
+
         <div class="container-fluid header">
             <div class="row">
                 <div class="col-xs-4 col-sm-3 col-md-4 col-lg-4 left">
-                    <img src="photos/stacksoverflowlogo.png" class="logo" href="index.html"/>
+                    <img src="photos/stacksoverflowlogo.png" class="logo" href="index.html" />
                 </div>
                 <div class="col-xs-4 col-sm-3 col-md-4 col-lg-4 center">
                 </div>
@@ -28,7 +28,7 @@
                             <div class="sign-text">SIGN UP</div>
                         </div>
                     </a>
-    
+
                     <a href="#" class="log-a">
                         <div class="log-button">
                             <div class="log-text">LOG IN</div>
@@ -37,7 +37,7 @@
                 </div>
             </div>
         </div>
-    
+
         <!-- input forms for user info -->
         <div id="spending" class="col-sm-4">
             <div class="input-group">
@@ -93,8 +93,10 @@
         <div id="barGraph" class="col-sm-8">
             <canvas id="spendingChart" width="600" height="400"></canvas>
         </div>
-        <script src="js/budget.js"></script>
 
+        <!--Added chart.js cdn file-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+        <script src="js/budget.js"></script>
     </body>
 
     </html>

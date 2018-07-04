@@ -7,7 +7,7 @@ body {
   height: 100vh;
   overflow: hidden;
   background-image: url('../photos/bg.png');
-  background-size: cover; 
+  background-size: cover;
 }
 
 a {
@@ -40,7 +40,8 @@ a:hover {
 
 .left {
   margin: 0 auto;
-  text-align: left;;
+  text-align: left;
+  ;
 }
 
 .build-button {
@@ -104,7 +105,7 @@ a:hover {
   font-size: 20px;
   font-weight: 400;
   font-family: 'Raleway', sans-serif;
-  color:white;
+  color: white;
   border: none;
 }
 
@@ -129,10 +130,12 @@ a:hover {
 }
 
 .better {
-  color:#82ca9c;
+  color: #82ca9c;
 }
 
-.quote1, .quote2, .quote3 {
+.quote1,
+.quote2,
+.quote3 {
   display: inline-block;
   font-family: 'Raleway', sans-serif;
   text-align: center;
@@ -190,6 +193,7 @@ a:hover {
 /* MEDIA QUERIES */
 
 /* phone */
+
 @media screen and (min-width: 300px) and (max-width: 510px) {
   .background-img {
     height: 100%;
@@ -200,11 +204,9 @@ a:hover {
     right: 0;
     z-index: -100;
   }
-
   .right {
     margin: 0 auto;
   }
-
   .sign-button {
     margin: 0 auto;
     text-align: center;
@@ -215,7 +217,6 @@ a:hover {
     display: inline-block;
     margin-top: 25px;
   }
-
   .sign-text {
     text-align: center;
     font-size: 15px;
@@ -224,7 +225,6 @@ a:hover {
     color: black;
     padding-top: 5px;
   }
-
   .log-button {
     margin: 0 auto;
     text-align: center;
@@ -234,16 +234,14 @@ a:hover {
     height: 30px;
     display: inline-block;
   }
-  
   .log-text {
     text-align: center;
     font-size: 15px;
     font-weight: 400;
     font-family: 'Raleway', sans-serif;
-    color:white;
+    color: white;
     padding-top: 5px;
   }
-  
   .build-button {
     text-align: center;
     background-color: #82ca9c;
@@ -254,7 +252,6 @@ a:hover {
     display: inline-block;
     margin-top: 20px;
   }
-  
   .build-text {
     text-align: center;
     font-size: 12px;
@@ -263,11 +260,9 @@ a:hover {
     color: black;
     padding-top: 13px;
   }
-
   .center {
     text-align: center;
   }
-
   .logo {
     height: 40px;
     width: auto;
@@ -275,11 +270,11 @@ a:hover {
 }
 
 /* tablet */
-@media screen and (min-width: 511px) and (max-width: 1000px ) {
 
-}
+@media screen and (min-width: 511px) and (max-width: 1000px) {}
 
 /* laptops */
+
 @media screen and (min-width: 1001px) and (max-width: 2600px) {
   .logo {
     height: 80px;

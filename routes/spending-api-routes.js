@@ -9,7 +9,7 @@ module.exports = function (app) {
         db.Spending.findAll({
             include: [db.User]
         }).then(function (dbSpending) {
-            console.log("These are all the budgets on file:" + JSON.stringify(dbSpending));
+            //console.log("These are all the budgets on file:" + JSON.stringify(dbSpending));
             res.json(dbSpending);
         });
     });
@@ -32,19 +32,32 @@ module.exports = function (app) {
     //POST route for spending information input by the user
     app.post("/newbudget", function (req, res) {
         console.log(req.body);
+        var {
+            monthlyIncome = 0,
+            housing = 0,
+            utilities = 0,
+            phone = 0,
+            cable_internet = 0,
+            food = 0,
+            clothing = 0,
+            beauty = 0,
+            entertainment = 0,
+            UserId = 1,
+        } = req.body; //object destructuring
+
         db.Spending.create({
-            monthlyIncome: req.body.monthlyIncome,
-            housing: req.body.housing,
-            utilities: req.body.utilities,
-            phone: req.body.phone,
-            cable_internet: req.body.cable_internet,
-            food: req.body.food,
-            clothing: req.body.clothing,
-            beauty: req.body.beauty,
-            entertainment: req.body.entertainment,
+            monthlyIncome,
+            housing,
+            utilities,
+            phone,
+            cable_internet,
+            food,
+            clothing,
+            beauty,
+            entertainment,
             //we can't keep this userID field in the request.  
             //or we have to send it with the budget info.
-            UserId: 1
+            UserId
         }).then(function (dbSpending) {
             res.json(dbSpending);
 
@@ -68,7 +81,6 @@ module.exports = function (app) {
             console.log("Clothing accounts for " + clothingPercentage.toFixed(2) * 100 + "% of your monthly income!");
             console.log("Beauty supplies make up " + beautyPercentage.toFixed(2) * 100 + "% of your monthly income!");
             console.log("Entertainment spending accounts for " + entertainmentPercentage.toFixed(2) * 100 + "% of your monthly income!");
-            console.log("The above came back from the database!");
             console.log("you've spent " + (totalExpensesPercent) * 100 + "% of your monthly income.");
             console.log(parseInt(dbSpending.housing) + parseInt(dbSpending.utilities));
             console.log(totalExpenses);
