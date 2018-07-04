@@ -41,6 +41,7 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.INTEGER,
       allowNull: true,
       isNumeric: true,
+      Default: 0,
       len: [0, 1000000]
     },
     beauty: {
