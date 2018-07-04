@@ -57,6 +57,8 @@ module.exports = function (app) {
             var clothingPercentage = (dbSpending.clothing / dbSpending.monthlyIncome);
             var beautyPercentage = (dbSpending.beauty / dbSpending.monthlyIncome);
             var entertainmentPercentage = (dbSpending.entertainment / dbSpending.monthlyIncome);
+            var totalExpensesPercent = (housingPercentage + utilitiesPercentage + phonePercentage + cableInternetPercentage + foodPercentage + clothingPercentage + beautyPercentage + entertainmentPercentage).toFixed(2);
+            var totalExpenses = parseInt(dbSpending.housing) + parseInt(dbSpending.utilities) + parseInt(dbSpending.phone) + parseInt(dbSpending.food) + parseInt(dbSpending.clothing) + parseInt(dbSpending.beauty) + parseInt(dbSpending.entertainment);
 
             console.log("Housing accounts for " + housingPercentage.toFixed(2) * 100 + "% of your monthly income!");
             console.log("Utilities account for " + utilitiesPercentage.toFixed(2) * 100 + "% of your monthly income!");
@@ -67,6 +69,10 @@ module.exports = function (app) {
             console.log("Beauty supplies make up " + beautyPercentage.toFixed(2) * 100 + "% of your monthly income!");
             console.log("Entertainment spending accounts for " + entertainmentPercentage.toFixed(2) * 100 + "% of your monthly income!");
             console.log("The above came back from the database!");
+            console.log("you've spent " + (totalExpensesPercent) * 100 + "% of your monthly income.");
+            console.log(parseInt(dbSpending.housing) + parseInt(dbSpending.utilities));
+            console.log(totalExpenses);
+            console.log("you have $" + (parseInt(dbSpending.monthlyIncome) - totalExpenses) + " remaining to spend");
         });
     });
 
