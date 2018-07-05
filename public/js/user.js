@@ -36,8 +36,8 @@ $("#log-button").on("click", function (event) {
     event.preventDefault();
 
     var userData = {
-        nickname: $("nani nani").val().trim(),
-        password: $("nani nani").val().trim(),
+        nickname: "Shaq", //$("nani nani").val().trim(),
+        password: "password123", //$("nani nani").val().trim(),
     };
     console.log(userData);
 
