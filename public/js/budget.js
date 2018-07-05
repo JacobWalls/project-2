@@ -42,10 +42,11 @@ $("#pushButton").on("click", function (event) {
   $.post("/newbudget", userData)
 
     .then(function (data) {
-
-      console.log(data);
+      //make the existing chart disappear
+      $("#spendingChart").hide(1500),
+        console.log(data);
       localStorage.setItem("userId", data.id);
-      
+
       spendingData = {
         label: 'Spending',
         data: [data.monthlyIncome,
@@ -57,13 +58,12 @@ $("#pushButton").on("click", function (event) {
           data.clothing,
           data.beauty,
           data.entertainment
-          
+
         ]
       };
 
-     
 
-       newbarChart = new Chart(spendingChart2, {
+      newbarChart = new Chart(spendingChart2, {
         type: 'bar',
         data: {
           labels: ["Monthly Income", "Housing", "Utilities", "Phone", "Cable/Internet", "Food", "Clothing", "Beauty", "Entertainment"],
