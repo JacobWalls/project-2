@@ -42,7 +42,7 @@ module.exports = function (app) {
             clothing = 0,
             beauty = 0,
             entertainment = 0,
-            UserId = 1,
+            UserId = 1
         } = req.body; //object destructuring
 
         db.Spending.create({
