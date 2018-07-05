@@ -4,7 +4,6 @@
 }
 
 body {
-  height: 100vh;
   overflow: hidden;
   background-image: url('../photos/bg.png');
   background-size: cover;
@@ -30,7 +29,7 @@ a:hover {
 /* HEADER CONTROLS */
 
 .header {
-  height: 11%;
+  height: 13%;
   width: 100%;
   background-color: white;
   border-bottom: 1px grey solid;
@@ -42,26 +41,6 @@ a:hover {
   margin: 0 auto;
   text-align: left;
   ;
-}
-
-.build-button {
-  text-align: center;
-  background-color: #82ca9c;
-  border-radius: 8px;
-  width: 200px;
-  height: 55px;
-  margin: 16px;
-  display: inline-block;
-  margin-top: 25px;
-}
-
-.build-text {
-  text-align: center;
-  font-size: 25px;
-  font-weight: 400;
-  font-family: 'Raleway', sans-serif;
-  color: black;
-  padding-top: 10px;
 }
 
 .center {
@@ -82,7 +61,7 @@ a:hover {
   text-align: center;
   background-color: #82ca9c;
   border-radius: 8px;
-  width: 110px;
+  width: 120px;
   height: 50px;
   display: inline-block;
   border: none;
@@ -98,7 +77,7 @@ a:hover {
   background-color: #636363;
   border-radius: 8px;
   width: 120px;
-  height: 55px;
+  height: 50px;
   margin: 16px;
   display: inline-block;
   text-align: center;
@@ -142,50 +121,49 @@ a:hover {
 }
 
 .quote1 {
-  margin: 25px;
-  margin-left: 55px;
+  margin-left: 45px;
   position: relative;
   top: 130px;
 }
 
 .quote1-text {
-  font-size: 30px;
+  font-size: 18px;
 }
 
 .quote1-name {
-  font-size: 32px;
+  font-size: 24px;
   position: relative;
   right: 100px;
 }
 
 .quote2 {
-  margin: 25px;
+  margin: 15px;
   position: relative;
   top: 190px;
 }
 
 .quote2-text {
-  font-size: 25px;
+  font-size: 18px;
 }
 
 .quote2-name {
-  font-size: 26px;
+  font-size: 24px;
   position: relative;
   left: 100px;
 }
 
 .quote3 {
-  margin: 25px;
+  margin: 15px;
   position: relative;
   top: 160px;
 }
 
 .quote3-text {
-  font-size: 25px;
+  font-size: 18px;
 }
 
 .quote3-name {
-  font-size: 26px;
+  font-size: 24px;
   position: relative;
   left: 200px;
 }
@@ -280,4 +258,38 @@ a:hover {
     height: 80px;
     width: auto;
   }
+
+}
+
+/* budget css */
+
+.input-group-addon{
+  color: black;
+  width: 140px;
+}
+#pushButton{
+  color: lightgray;
+  background-color: rgb(13, 133, 13);
+  height: 40px;
+  width: 85%;
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+/* spending table and graph */
+#spending{
+  border-style: solid;
+  border-color: gray;
+  margin:10% 0 0 5%;
+  padding: 10px 15px;
+  background-color: rgb(230, 230, 230);
+  border-radius: 10px;
+}
+
+#barGraph{
+  border-style: solid;
+  float: right;
+  margin:10% 0 10% 0;
+
 }
