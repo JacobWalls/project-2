@@ -31,7 +31,12 @@ module.exports = function (app) {
             email: req.body.email,
             nickname: req.body.nickname,
             password: req.body.password
-        });
+
+        }).then(function (err, data) {
+            //telling the user that they need to create a unique user name
+            res.json(data);
+
+        }) //.catch function;
     });
 
 
