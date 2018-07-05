@@ -1,4 +1,5 @@
 const CHART = document.getElementById("spendingChart");
+const CHART2 = document.getElementById("spendingChart2");
 
 // Chart.defaults.global.defaultFontFamily = "Lato";
 // Chart.defaults.global.defaultFontSize = 18;
@@ -43,9 +44,33 @@ $("#pushButton").on("click", function (event) {
     .then(function (data) {
 
       console.log(data);
-
-    
+      localStorage.setItem("userId", data.id);
       
+      spendingData = {
+        label: 'Spending',
+        data: [data.monthlyIncome,
+          data.housing,
+          data.utilities,
+          data.phone,
+          data.cable_internet,
+          data.food,
+          data.clothing,
+          data.beauty,
+          data.entertainment
+          
+        ]
+      };
+
+     
+
+       newbarChart = new Chart(spendingChart2, {
+        type: 'bar',
+        data: {
+          labels: ["Monthly Income", "Housing", "Utilities", "Phone", "Cable/Internet", "Food", "Clothing", "Beauty", "Entertainment"],
+          datasets: [spendingData]
+        }
+      });
+      console.log(spendingData);
     })
 
   // $("#monthlyIncome").val(data.monthlyIncome);
@@ -62,7 +87,7 @@ $("#pushButton").on("click", function (event) {
 function addData(chart, label, data) {
   chart.data.labels.push(label);
   chart.data.datasets.forEach((dataset) => {
-      dataset.data.push(data);
+    dataset.data.push(data);
   });
   chart.update();
 }

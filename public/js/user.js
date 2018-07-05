@@ -5,7 +5,7 @@ $("#sign-button").on("click", function (event) {
     var signupData = {
         full_name: "me",
         email: "@gmail.com",
-        nickname: 'foots',
+        nickname: 'jubei',
         password: 'nunya'
         //full_name: $("nani nani").val().trim(),
         // email: $("nani nani").val().trim(),
@@ -18,10 +18,10 @@ $("#sign-button").on("click", function (event) {
 
         .then(function (data) {
             console.log(data);
-            // if (data.userId) {
-            //     alert("User Name is taken")
-            // }
-            // localStorage.setItem('userId', data.id);
+            if (data.UserId) {
+                alert("User Name is taken")
+            }
+            localStorage.setItem('userId', data.id);
         })
 
     $("#full_nameid").val("");
