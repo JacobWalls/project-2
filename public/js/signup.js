@@ -14,11 +14,12 @@ $('#submit-signUp').on("click", function () {
     nickname,
     password
   }
-console.log(newUser);
+  console.log(newUser);
 
   $.post("/users", newUser)
 
     .then(function (data) {
       console.log(data);
+      window.location.pathname = "/newBudget";
     })
 });
