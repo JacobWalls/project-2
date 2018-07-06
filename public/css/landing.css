@@ -4,10 +4,9 @@
 }
 
 body {
-  height: 100vh;
   overflow: hidden;
   background-image: url('../photos/bg.png');
-  background-size: cover; 
+  background-size: cover;
 }
 
 a {
@@ -30,7 +29,7 @@ a:hover {
 /* HEADER CONTROLS */
 
 .header {
-  height: 11%;
+  height: 13%;
   width: 100%;
   background-color: white;
   border-bottom: 1px grey solid;
@@ -40,7 +39,7 @@ a:hover {
 
 .left {
   margin: 0 auto;
-  text-align: left;;
+  text-align: left;
 }
 
 .center {
@@ -61,7 +60,7 @@ a:hover {
   text-align: center;
   background-color: #82ca9c;
   border-radius: 8px;
-  width: 110px;
+  width: 120px;
   height: 50px;
   display: inline-block;
   border: none;
@@ -84,7 +83,7 @@ a:hover {
   font-size: 20px;
   font-weight: 400;
   font-family: 'Raleway', sans-serif;
-  color:white;
+  color: white;
   border: none;
 }
 
@@ -109,60 +108,61 @@ a:hover {
 }
 
 .better {
-  color:#82ca9c;
+  color: #82ca9c;
 }
 
-.quote1, .quote2, .quote3 {
+.quote1,
+.quote2,
+.quote3 {
   display: inline-block;
   font-family: 'Raleway', sans-serif;
   text-align: center;
 }
 
 .quote1 {
-  margin: 25px;
-  margin-left: 55px;
+  margin-left: 45px;
   position: relative;
   top: 130px;
 }
 
 .quote1-text {
-  font-size: 30px;
+  font-size: 18px;
 }
 
 .quote1-name {
-  font-size: 32px;
+  font-size: 24px;
   position: relative;
   right: 100px;
 }
 
 .quote2 {
-  margin: 25px;
+  margin: 15px;
   position: relative;
   top: 190px;
 }
 
 .quote2-text {
-  font-size: 25px;
+  font-size: 18px;
 }
 
 .quote2-name {
-  font-size: 26px;
+  font-size: 24px;
   position: relative;
   left: 100px;
 }
 
 .quote3 {
-  margin: 25px;
+  margin: 15px;
   position: relative;
   top: 160px;
 }
 
 .quote3-text {
-  font-size: 25px;
+  font-size: 18px;
 }
 
 .quote3-name {
-  font-size: 26px;
+  font-size: 24px;
   position: relative;
   left: 200px;
 }
@@ -198,6 +198,7 @@ a:hover {
 /* MEDIA QUERIES */
 
 /* phone */
+
 @media screen and (min-width: 300px) and (max-width: 510px) {
   .background-img {
     height: 100%;
@@ -208,11 +209,9 @@ a:hover {
     right: 0;
     z-index: -100;
   }
-
   .right {
     margin: 0 auto;
   }
-
   .sign-button {
     margin: 0 auto;
     text-align: center;
@@ -223,7 +222,6 @@ a:hover {
     display: inline-block;
     margin-top: 25px;
   }
-
   .sign-text {
     text-align: center;
     font-size: 15px;
@@ -232,7 +230,6 @@ a:hover {
     color: black;
     padding-top: 5px;
   }
-
   .log-button {
     margin: 0 auto;
     text-align: center;
@@ -242,16 +239,14 @@ a:hover {
     height: 30px;
     display: inline-block;
   }
-  
   .log-text {
     text-align: center;
     font-size: 15px;
     font-weight: 400;
     font-family: 'Raleway', sans-serif;
-    color:white;
+    color: white;
     padding-top: 5px;
   }
-  
   .build-button {
     text-align: center;
     background-color: #82ca9c;
@@ -262,7 +257,6 @@ a:hover {
     display: inline-block;
     margin-top: 20px;
   }
-  
   .build-text {
     text-align: center;
     font-size: 12px;
@@ -271,11 +265,9 @@ a:hover {
     color: black;
     padding-top: 13px;
   }
-
   .center {
     text-align: center;
   }
-
   .logo {
     height: 40px;
     width: auto;
@@ -283,9 +275,8 @@ a:hover {
 }
 
 /* tablet */
-@media screen and (min-width: 511px) and (max-width: 1000px ) {
 
-}
+@media screen and (min-width: 511px) and (max-width: 1000px) {}
 
 /* laptops */
 @media screen and (min-width: 1001px) and (max-width: 1400px) {
@@ -294,4 +285,38 @@ a:hover {
     width: auto;
     margin: 0 auto;
   }
+
+}
+
+/* budget css */
+
+.input-group-addon{
+  color: black;
+  width: 140px;
+}
+#pushButton{
+  color: lightgray;
+  background-color: rgb(13, 133, 13);
+  height: 40px;
+  width: 85%;
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+/* spending table and graph */
+#spending{
+  border-style: solid;
+  border-color: gray;
+  margin:10% 0 0 5%;
+  padding: 10px 15px;
+  background-color: rgb(230, 230, 230);
+  border-radius: 10px;
+}
+
+#barGraph{
+  border-style: solid;
+  float: right;
+  margin:10% 0 10% 0;
+
 }
