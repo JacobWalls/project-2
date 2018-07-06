@@ -108,5 +108,7 @@ function updateBudget(userData) {
     method: "PUT",
     url: "/api/users",
     data: userData
-  }).then(data);
-}
+  }).then(function (data){
+    console.log(data);
+  })
+};

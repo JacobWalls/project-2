@@ -91,7 +91,7 @@ a:hover {
 
 .landing {
   position: relative;
-  z-index: 1;
+  /* z-index: 1; */
   width: 100%;
 }
 
@@ -188,12 +188,12 @@ a:hover {
   text-align: center;
 }
 
-#firstname, #lastname {
+#firstname,
+#lastname {
   width: 200px;
   margin: 10px;
   height: 55px;
 }
-
 
 /* MEDIA QUERIES */
 
@@ -279,22 +279,23 @@ a:hover {
 @media screen and (min-width: 511px) and (max-width: 1000px) {}
 
 /* laptops */
+
 @media screen and (min-width: 1001px) and (max-width: 1400px) {
   .logo {
     height: 80px;
     width: auto;
     margin: 0 auto;
   }
-
 }
 
 /* budget css */
 
-.input-group-addon{
+.input-group-addon {
   color: black;
   width: 140px;
 }
-#pushButton{
+
+#pushButton {
   color: lightgray;
   background-color: rgb(13, 133, 13);
   height: 40px;
@@ -305,18 +306,18 @@ a:hover {
 }
 
 /* spending table and graph */
-#spending{
+
+#spending {
   border-style: solid;
   border-color: gray;
-  margin:10% 0 0 5%;
+  margin: 10% 0 0 5%;
   padding: 10px 15px;
   background-color: rgb(230, 230, 230);
   border-radius: 10px;
 }
 
-#barGraph{
+#barGraph {
   border-style: solid;
   float: right;
-  margin:10% 0 10% 0;
-
+  margin: 10% 0 10% 0;
 }

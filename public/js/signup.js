@@ -1,23 +1,24 @@
 var newUser;
 
-$('#submit-signUp').on("click", function() {
+$('#submit-signUp').on("click", function () {
   event.preventDefault();
 
-var fullname = $('#fullname').val().trim();
-var email = $('#email').val().trim();
-var nickname = $('#userid').val().trim();
-var password = $('#password').val().trim();
+  var full_name = $('#fullname').val().trim();
+  var email = $('#email').val().trim();
+  var nickname = $('#nickname').val().trim();
+  var password = $('#password').val().trim();
 
   newUser = {
-    fullname,
+    full_name,
     email,
     nickname,
     password
   }
+console.log(newUser);
 
-  $.post("/api/users", signUp)
+  $.post("/users", newUser)
 
-        .then(function (data) {
-            console.log(data);
-        })
+    .then(function (data) {
+      console.log(data);
+    })
 });
