@@ -4,7 +4,7 @@
   "description": "budget app",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha",
     "start": "node main.js"
   },
   "repository": {
@@ -28,5 +28,9 @@
     "express": "^4.16.3",
     "mysql2": "^1.5.3",
     "sequelize": "^4.38.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0"
   }
 }
