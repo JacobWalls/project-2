@@ -9,7 +9,7 @@ var spendingData = {
   data: [6000, x, 5514, 3933, 1326, 687, 1271, 1638, 2000]
 };
 
-var barChart = new Chart(spendingChart, {
+var barChart = new Chart(spendingChart2, {
   type: 'bar',
   data: {
     labels: ["Monthly Income", "Housing", "Utilities", "Phone", "Cable/Internet", "Food", "Clothing", "Beauty", "Entertainment"],
@@ -22,6 +22,7 @@ var barChart = new Chart(spendingChart, {
 // adding button functionality to our budget page
 
 $("#pushButton").on("click", function (event) {
+
   event.preventDefault();
 
 
@@ -42,9 +43,8 @@ $("#pushButton").on("click", function (event) {
   $.post("/newbudget", userData)
 
     .then(function (data) {
-      //make the existing chart disappear
-      $("#spendingChart").hide(1500),
-        console.log(data);
+
+      console.log(data);
       localStorage.setItem("userId", data.id);
 
       spendingData = {
@@ -59,6 +59,17 @@ $("#pushButton").on("click", function (event) {
           data.beauty,
           data.entertainment
 
+        ],
+        backgroundColor: [
+          "lightgray",
+          "rgb(223, 195, 41)",
+          "skyblue",
+          "salmon",
+          "rgb(230, 54, 230)",
+          "lime",
+          "rgba(172, 28, 59, 0.664)",
+          "rgb(240, 195, 195)",
+          "rgb(28, 161, 161)",
         ]
       };
 
@@ -90,4 +101,12 @@ function addData(chart, label, data) {
     dataset.data.push(data);
   });
   chart.update();
+}
+
+function updateBudget(userData) {
+  $.ajax({
+    method: "PUT",
+    url: "/api/users",
+    data: userData
+  }).then(data);
 }
