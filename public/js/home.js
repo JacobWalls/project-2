@@ -18,4 +18,4 @@ $("#modalSignup").on("click", function (event) {
     $("#email").val("");
     $("#nickname").val("");
     $("#password").val("");
-})
+});

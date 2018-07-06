@@ -5,19 +5,19 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.INTEGER,
       allowNull: true,
       isNumeric: true,
-      len: [0, 1000000]
+      
     },
     housing: {
       type: DataTypes.INTEGER,
       allowNull: true,
       isNumeric: true,
-      len: [0, 1000000]
+      
     },
     utilities: {
       type: DataTypes.INTEGER,
       allowNull: true,
       isNumeric: true,
-      len: [0, 1000000]
+      
     },
     phone: {
       type: DataTypes.INTEGER,
@@ -41,6 +41,7 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.INTEGER,
       allowNull: true,
       isNumeric: true,
+      Default: 0,
       len: [0, 1000000]
     },
     beauty: {
