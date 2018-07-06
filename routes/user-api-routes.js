@@ -11,14 +11,15 @@ module.exports = function (app) {
     });
 
     //GET ROUTE to pull a specific user according to nickname and password
-    app.get("/users/:nickname/:password", function (req, res) {
+    app.get("/returningUser", function (req, res) {
         db.User.findOne({
             where: {
-                nickname: req.params.nickname,
-                password: req.params.password
+                nickname: req.query.nickname,
+                password: req.query.password
             },
             include: [db.Spending]
         }).then(function (dbUser) {
+           
             res.json(dbUser);
         });
     });
@@ -40,6 +41,17 @@ module.exports = function (app) {
     });
 
 
+    //GET ROUTE to pull a specific budget according to nickname and password
+    app.get("/budgets/:userId", function (req, res) {
+        db.User.findOne({
+            where: {
+                id: req.params.userId
 
+            },
+            include: [db.Spending]
+        }).then(function (dbUser) {
+            res.json(dbUser);
+        });
+    });
 
 }
