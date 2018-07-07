@@ -11,7 +11,7 @@ module.exports = function (app) {
     });
 
     //GET ROUTE to pull a specific user according to nickname and password
-    app.get("/returningUser", function (req, res) {
+    app.get("/login", function (req, res) {
         db.User.findOne({
             where: {
                 nickname: req.query.nickname,

@@ -5,19 +5,19 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.INTEGER,
       allowNull: true,
       isNumeric: true,
-      
+
     },
     housing: {
       type: DataTypes.INTEGER,
       allowNull: true,
       isNumeric: true,
-      
+
     },
     utilities: {
       type: DataTypes.INTEGER,
       allowNull: true,
       isNumeric: true,
-      
+
     },
     phone: {
       type: DataTypes.INTEGER,
@@ -63,7 +63,7 @@ module.exports = function (sequelize, DataTypes) {
     // Spending can't be created without a user due to the foreign key constraint
     Spending.belongsTo(models.User, {
       foreignKey: {
-        allowNull: false
+        allowNull: true
       }
     });
   };
