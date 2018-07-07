@@ -100,8 +100,17 @@ a:hover {
   text-align: center;
 }
 
-#firstname, #lastname {
+#fullname, #email, #nickname, #password {
   width: 200px;
   margin: 10px;
   height: 55px;
+}
+
+#submit-signUp {
+  height: 40px;
+  border: none;
+  width: 85px;
+  background-color: #82ca9c;
+  padding: 20px;
+  text-align: center;
 }
