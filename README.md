@@ -1,4 +1,4 @@
-#Stack$ Overflowed
+# Stack$ Overflowed
 
 An application geared towards young adults, to teach them the principles of budgeting and finance, Stack$ Overflowed is the go-to place for answers and education about money! 
 
