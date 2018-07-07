@@ -22,7 +22,7 @@ a:hover {
 /* HEADER CONTROLS */
 
 .header {
-  height: 10%;
+  height: 13%;
   width: 100%;
   background-color: white;
   border-bottom: 1px grey solid;
@@ -38,8 +38,8 @@ a:hover {
 }
 
 .logo {
-  height: 100px;
-  width: auto;
+  height: 80px;
+  width: 160px;
 }
 
 .right {
@@ -81,12 +81,15 @@ a:hover {
 /* FORM CONTROL */
 
 .sign-up {
+  border-style: solid;
+  border-radius: 15px;
   margin-top: 70px;
   width: 300px;
   height: 400px;
   background-color: lightgrey;
   text-align: center;
   position: relative;
+  font-size: 18px;
 }
 
 .sign-text {
@@ -105,13 +108,10 @@ a:hover {
   width: 200px;
   margin: 10px;
   height: 55px;
+  border-radius: 10px;
 }
 
-#submit-signUp {
-  height: 40px;
-  border: none;
-  width: 85px;
-  background-color: #82ca9c;
-  padding: 20px;
-  text-align: center;
+#submit-signUp, #returningUser {
+  background-color: #82ca9c; 
 }
+
