@@ -1,43 +1,43 @@
 var db = require("../models");
 
-module.exports = function(app) {
+module.exports = function (app) {
   //GET route to pull all of the budgets on file
-  app.get("/budgets", function(req, res) {
+  app.get("/budgets", function (req, res) {
     db.Spending.findAll({
       include: [db.User]
-    }).then(function(dbSpending) {
+    }).then(function (dbSpending) {
       //console.log("These are all the budgets on file:" + JSON.stringify(dbSpending));
       res.json(dbSpending);
     });
   });
 
   //GET route to pull a single budget by a particular nickname and password
-  app.get("/budgets/:nickname/:password", function(req, res) {
+  app.get("/budgets/:nickname/:password", function (req, res) {
     db.User.findOne({
       where: {
         nickname: req.params.nickname,
         password: req.params.password
       },
       include: [db.Spending]
-    }).then(function(dbSpending) {
+    }).then(function (dbSpending) {
       res.json(dbSpending);
     });
   });
 
   //POST route for spending information input by the user
-  app.post("/newbudget", function(req, res) {
+  app.post("/newbudget", function (req, res) {
     console.log(req.body);
     var {
       monthlyIncome = 0,
-      housing = 0,
-      utilities = 0,
-      phone = 0,
-      cable_internet = 0,
-      food = 0,
-      clothing = 0,
-      beauty = 0,
-      entertainment = 0,
-      UserId = 1
+        housing = 0,
+        utilities = 0,
+        phone = 0,
+        cable_internet = 0,
+        food = 0,
+        clothing = 0,
+        beauty = 0,
+        entertainment = 0,
+        UserId = 1
     } = req.body; //object destructuring
 
     db.Spending.create({
@@ -53,7 +53,7 @@ module.exports = function(app) {
       //we can't keep this userID field in the request.
       //or we have to send it with the budget info.
       UserId
-    }).then(function(dbSpending) {
+    }).then(function (dbSpending) {
       res.json(dbSpending);
 
       var housingPercentage = dbSpending.housing / dbSpending.monthlyIncome;
@@ -87,82 +87,79 @@ module.exports = function(app) {
 
       console.log(
         "Housing accounts for " +
-          parseFloat(housingPercentage).toFixed(2) * 100 +
-          "% of your monthly income!"
+        parseFloat(housingPercentage).toFixed(2) * 100 +
+        "% of your monthly income!"
       );
       console.log(
         "Utilities account for " +
-          parseFloat(utilitiesPercentage).toFixed(2) * 100 +
-          "% of your monthly income!"
+        parseFloat(utilitiesPercentage).toFixed(2) * 100 +
+        "% of your monthly income!"
       );
       console.log(
         "Your phone bill accounts for " +
-          parseFloat(phonePercentage).toFixed(2) * 100 +
-          "% of your monthly income!"
+        parseFloat(phonePercentage).toFixed(2) * 100 +
+        "% of your monthly income!"
       );
       console.log(
         "Cable/Internet accounts for " +
-          parseFloat(cableInternetPercentage).toFixed(2) * 100 +
-          "% of your monthly income!"
+        parseFloat(cableInternetPercentage).toFixed(2) * 100 +
+        "% of your monthly income!"
       );
       console.log(
         "Food accounts for " +
-          parseFloat(foodPercentage).toFixed(2) * 100 +
-          "% of your monthly income!"
+        parseFloat(foodPercentage).toFixed(2) * 100 +
+        "% of your monthly income!"
       );
       console.log(
         "Clothing accounts for " +
-          parseFloat(clothingPercentage).toFixed(2) * 100 +
-          "% of your monthly income!"
+        parseFloat(clothingPercentage).toFixed(2) * 100 +
+        "% of your monthly income!"
       );
       console.log(
         "Beauty supplies make up " +
-          parseFloat(beautyPercentage).toFixed(2) * 100 +
-          "% of your monthly income!"
+        parseFloat(beautyPercentage).toFixed(2) * 100 +
+        "% of your monthly income!"
       );
       console.log(
         "Entertainment spending accounts for " +
-          parseFloat(entertainmentPercentage).toFixed(2) * 100 +
-          "% of your monthly income!"
+        parseFloat(entertainmentPercentage).toFixed(2) * 100 +
+        "% of your monthly income!"
       );
       console.log(
         "you've spent " +
-          parseFloat(totalExpensesPercent).toFixed(2) * 100 +
-          "% of your monthly income."
+        parseFloat(totalExpensesPercent).toFixed(2) * 100 +
+        "% of your monthly income."
       );
       console.log(
         parseFloat(dbSpending.housing).toFixed(2) +
-          parseFloat(dbSpending.utilities).toFixed(2)
+        parseFloat(dbSpending.utilities).toFixed(2)
       );
       console.log(totalExpenses);
       console.log(
         "you have $" +
-          (parseFloat(dbSpending.monthlyIncome) - totalExpenses) +
-          " remaining to spend"
+        (parseFloat(dbSpending.monthlyIncome) - totalExpenses) +
+        " remaining to spend"
       );
     });
   });
 
   //PUT route used to update the budget for users as well
-  app.put("/budgets/:nickname/:password", function(req, res) {
-    db.Spending.update(
-      {
-        // monthlyIncome: req.body.monthlyIncome,
-        // housing: req.body.housing,
-        // utilities: req.body.utilities,
-        // phone: req.body.phone,
-        // cable_internet: req.body.cable_internet,
-        // food: req.body.food,
-        // clothing: req.body.clothing,
-        // beauty: req.body.beauty,
-        // entertainment: req.body.entertainment
-      },
-      {
-        where: {
-          id: req.body.id
-        }
+  app.put("/budgets/:nickname/:password", function (req, res) {
+    db.Spending.update({
+      // monthlyIncome: req.body.monthlyIncome,
+      // housing: req.body.housing,
+      // utilities: req.body.utilities,
+      // phone: req.body.phone,
+      // cable_internet: req.body.cable_internet,
+      // food: req.body.food,
+      // clothing: req.body.clothing,
+      // beauty: req.body.beauty,
+      // entertainment: req.body.entertainment
+    }, {
+      where: {
+        id: req.body.id
       }
-    ).then(function(dbSpending) {
+    }).then(function (dbSpending) {
       res.json(dbSpending);
     });
   });

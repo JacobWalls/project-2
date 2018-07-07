@@ -31,4 +31,9 @@ module.exports = function (app) {
   app.get("/returningUser", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/login.html"));
   });
+
+  // budget route loads budget.html
+  app.get("/oldBudget", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/budget.html"));
+  });
 };
