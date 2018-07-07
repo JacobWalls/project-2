@@ -16,7 +16,7 @@ module.exports = function (sequelize, DataTypes) {
     // Associating User with Spending
     // When an User is deleted, also delete any associated Spending
     User.hasOne(models.Spending, {
-      onDelete: "cascade"
+      //onDelete: "cascade"
     });
   };
 

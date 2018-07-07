@@ -36,28 +36,34 @@ $("#returningUser").on("click", function (event) {
     event.preventDefault();
 
     var userData = {
-        nickname: "Shaq", //$("nani nani").val().trim(),
-        password: "password123", //$("nani nani").val().trim(),
+        nickname: $("#nickname").val().trim(),
+        password: $("#password").val().trim(),
     };
     console.log(userData);
 
-    $.get("/returningUser", userData)
+    $.get("/login", userData)
 
         .then(function (data) {
-            console.log(data);
             localStorage.setItem('userId', data.id);
             console.log(data);
-            //window.location.assign("/previousBudget")
+            //window.location.assign("/returningUser")
         })
 
     $("#nicknameId").val("");
     $("#passwordId").val("");
 
+    newUrl();
+
+    function newUrl() {
+        window.location.assign("/oldBudget")
+    }
 });
+
+//newUrl();
 
 /*The user will login and give a user name and password
 We'll take the user name (nickname) and password and search for them in the database
-Once we find them in the database we'll send back the id attacched to that row
+Once we find them in the database we'll send back the id attached to that row
 this is will be set in the local storage
 
 Whenever a user goes anywhere else in the site we'll have their userID from local storage

@@ -14,6 +14,16 @@ var barChart = new Chart(spendingChart2, {
   data: {
     labels: ["Monthly Income", "Housing", "Utilities", "Phone", "Cable/Internet", "Food", "Clothing", "Beauty", "Entertainment"],
     datasets: [spendingData]
+  },
+  //adding options to start the yaxis at zero 
+  options: {
+    scales:{
+      yAxes: [{
+        ticks: {
+          beginatZero: true
+        }
+      }]
+    }
   }
 });
 
@@ -108,7 +118,7 @@ function updateBudget(userData) {
     method: "PUT",
     url: "/api/users",
     data: userData
-  }).then(function (data){
+  }).then(function (data) {
     console.log(data);
   })
 };

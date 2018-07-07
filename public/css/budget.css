@@ -1,6 +1,7 @@
 body {
     background-image: url('../photos/bg.png');
     background-size: cover;
+    background-repeat: no-repeat;
   }
   
   a {
