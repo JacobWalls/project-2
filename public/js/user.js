@@ -41,13 +41,13 @@ $("#returningUser").on("click", function (event) {
     };
     console.log(userData);
 
-    $.get("/returningUser", userData)
+    $.get("/user", userData)
 
         .then(function (data) {
             console.log(data);
             localStorage.setItem('userId', data.id);
             console.log(data);
-            //window.location.assign("/previousBudget")
+            //window.location.assign("/returningUser")
         })
 
     $("#nicknameId").val("");

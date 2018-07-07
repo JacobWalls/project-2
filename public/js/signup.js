@@ -20,6 +20,12 @@ $('#submit-signUp').on("click", function () {
 
     .then(function (data) {
       console.log(data);
-      window.location.pathname = "/newBudget";
+
     })
+  console.log("you got it!");
+  newUrl();
+
+  function newUrl() {
+    window.location.assign("/newBudget")
+  }
 });
