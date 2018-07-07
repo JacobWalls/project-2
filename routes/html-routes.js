@@ -26,4 +26,9 @@ module.exports = function (app) {
   app.get("/signup", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/signup.html"));
   });
+
+  // user route loads signup page
+  app.get("/returningUser", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/login.html"));
+  });
 };
